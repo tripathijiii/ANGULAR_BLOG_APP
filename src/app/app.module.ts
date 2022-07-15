@@ -17,6 +17,8 @@ import {MatCardModule} from '@angular/material/card';
 import { PostListComponent } from './admin/dashboard/posts/post-list/post-list.component';
 import {MatExpansionModule, MatExpansionPanel} from '@angular/material/expansion';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -45,7 +47,13 @@ const UX_Modules =[
     BrowserAnimationsModule,
     UX_Modules,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
     
   ],
   providers: [
