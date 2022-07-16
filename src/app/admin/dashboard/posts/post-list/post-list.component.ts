@@ -15,7 +15,7 @@ export class PostListComponent implements OnInit,OnDestroy {
   constructor(public postService:PostService) { 
     this.postService.getPost();
     this.postSub = this.postService.getUpdateListener().subscribe((posts:Post[])=>{
-      this.posts=posts;
+      this.posts=posts.reverse();
     })
   }
 

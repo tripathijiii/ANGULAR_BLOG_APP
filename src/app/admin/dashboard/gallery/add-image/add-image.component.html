@@ -1,0 +1,23 @@
+<mat-card>
+    <form  (submit)="onImageAdded(postForm)" #postForm="ngForm">
+        <mat-form-field>
+            <input type="url" 
+            ngModel
+            matInput name="title" 
+            required
+            #title = "ngModel"
+            placeholder="Image Url">
+        </mat-form-field>
+        <button 
+        mat-raised-button
+        color="accent"
+        type="submit"
+        >Upload Image</button>
+        <button 
+        class="cancel"
+        mat-raised-button
+        color="success"
+        [routerLink]="['/gallery']"
+        >Cancel</button>
+    </form>
+</mat-card>

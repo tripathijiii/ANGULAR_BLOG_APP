@@ -1,7 +1,8 @@
 const http = require('http');
 const app = require('./backend/app')
 const debug = require('debug')('node-server');
-const mysql = require('mysql2')
+
+const express = require('express');
 //error handling
 const normalPort = val =>{
     let port = parseInt(val,10);
@@ -32,16 +33,6 @@ const onError = error=>{
     }
 }
 
-const con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "******"
-});
-
-con.connect(function(err){
-    if(err) throw err;
-    console.log("connected");
-})
 
 const onListening=()=>{
     const add = server.address();

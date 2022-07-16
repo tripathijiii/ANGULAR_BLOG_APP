@@ -25,6 +25,7 @@ export class PostService{
     getPost(){
         this.http.get<{message:string,posts:Post[]}>("http://localhost:3000/api/posts").subscribe(postData=>{
             this.posts=postData.posts;
+            console.log(this.posts);
             this.postUpdated.next([...this.posts]);
         })
     }

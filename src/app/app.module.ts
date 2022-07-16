@@ -17,8 +17,13 @@ import {MatCardModule} from '@angular/material/card';
 import { PostListComponent } from './admin/dashboard/posts/post-list/post-list.component';
 import {MatExpansionModule, MatExpansionPanel} from '@angular/material/expansion';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { HomeComponent } from './admin/dashboard/home/home.component';
+import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
+import { GalleryLightboxComponent } from './gallery-lightbox/gallery-lightbox.component';
+import { AddImageComponent } from './admin/dashboard/gallery/add-image/add-image.component';
+//import { GalleryModule } from 'ng-gallery';
 
 const UX_Modules =[
   MatSidenavModule,
@@ -37,7 +42,12 @@ const UX_Modules =[
     SidebarComponent,
     DashboardComponent,
     PostCreateComponent,
-    PostListComponent
+    PostListComponent,
+    HomeComponent,
+    GalleryComponent,
+    GalleryLightboxComponent,
+    AddImageComponent,
+    //GalleryModule
   ],
   imports: [
     BrowserModule,
@@ -45,7 +55,13 @@ const UX_Modules =[
     BrowserAnimationsModule,
     UX_Modules,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
     
   ],
   providers: [
