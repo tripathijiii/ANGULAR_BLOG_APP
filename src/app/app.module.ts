@@ -19,8 +19,9 @@ import {MatExpansionModule, MatExpansionPanel} from '@angular/material/expansion
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
-
+import { HomeComponent } from './admin/dashboard/home/home.component';
+import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
+import { GalleryModule } from 'ng-gallery';
 
 const UX_Modules =[
   MatSidenavModule,
@@ -39,7 +40,10 @@ const UX_Modules =[
     SidebarComponent,
     DashboardComponent,
     PostCreateComponent,
-    PostListComponent
+    PostListComponent,
+    HomeComponent,
+    GalleryComponent,
+    GalleryModule
   ],
   imports: [
     BrowserModule,
