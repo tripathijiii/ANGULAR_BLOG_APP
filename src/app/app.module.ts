@@ -21,7 +21,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './admin/dashboard/home/home.component';
 import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
-import { GalleryModule } from 'ng-gallery';
+//import { GalleryModule } from 'ng-gallery';
 
 const UX_Modules =[
   MatSidenavModule,
@@ -43,7 +43,7 @@ const UX_Modules =[
     PostListComponent,
     HomeComponent,
     GalleryComponent,
-    GalleryModule
+    //GalleryModule
   ],
   imports: [
     BrowserModule,
