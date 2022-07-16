@@ -65,5 +65,18 @@ app.get('/api/allblog',(req,res,next)=>{
 });
 })
 
+app.get('/api/allimages',(req,res,next)=>{
+    let sql = 'Select * from images ';
+    let query = db.query(sql,(err,result)=>{
+        if(err) throw err;
+        console.log(result);
+        this.post = result;
+        res.status(200).json({
+            message:'post fetched successfully',
+            posts:result
+        });
+});
+})
+
 
 module.exports = app

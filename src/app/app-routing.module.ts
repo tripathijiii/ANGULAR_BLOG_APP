@@ -5,6 +5,7 @@ import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
 import { HomeComponent } from './admin/dashboard/home/home.component';
 import { PostCreateComponent } from './admin/dashboard/posts/post-create/post-create.component';
 import { DefaultComponent } from './admin/default/default.component';
+import { GalleryLightboxComponent } from './gallery-lightbox/gallery-lightbox.component';
 
 const routes: Routes = [
   {path:'',component: DefaultComponent,
@@ -12,7 +13,7 @@ const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'aboutMe',component:DashboardComponent},
     {path:'post',component:PostCreateComponent},
-    {path:'gallery',component:GalleryComponent},
+    {path:'gallery',component:GalleryLightboxComponent},
   ]
 },
 ];
