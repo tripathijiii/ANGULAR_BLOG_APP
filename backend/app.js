@@ -77,6 +77,17 @@ app.get('/api/allimages',(req,res,next)=>{
         });
 });
 })
+app.post('/api/allimages',(req,res,next)=>{
 
+    let sql = 'Insert INTO images SET ?';
+    const images = {imageSrc:req.body.title,imageAlt:"asbdhasbdjas"};
+    let query = db.query(sql,images,(err,result)=>{
+        if(err) throw err;
+        console.log(result);
+    })
+    res.status(200).json({
+        message:'image added successfully'
+    })
+})
 
 module.exports = app

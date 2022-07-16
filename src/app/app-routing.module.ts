@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AddImageComponent } from './admin/dashboard/gallery/add-image/add-image.component';
 import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
 import { HomeComponent } from './admin/dashboard/home/home.component';
 import { PostCreateComponent } from './admin/dashboard/posts/post-create/post-create.component';
@@ -13,7 +14,12 @@ const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'aboutMe',component:DashboardComponent},
     {path:'post',component:PostCreateComponent},
-    {path:'gallery',component:GalleryLightboxComponent},
+    {path:'gallery',component:GalleryComponent,
+    children:[
+      {path:'',component:GalleryLightboxComponent},
+      {path:'addImage',component:AddImageComponent}, 
+    ]
+    },
   ]
 },
 ];

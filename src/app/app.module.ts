@@ -22,6 +22,7 @@ import { environment } from '../environments/environment';
 import { HomeComponent } from './admin/dashboard/home/home.component';
 import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
 import { GalleryLightboxComponent } from './gallery-lightbox/gallery-lightbox.component';
+import { AddImageComponent } from './admin/dashboard/gallery/add-image/add-image.component';
 //import { GalleryModule } from 'ng-gallery';
 
 const UX_Modules =[
@@ -45,6 +46,7 @@ const UX_Modules =[
     HomeComponent,
     GalleryComponent,
     GalleryLightboxComponent,
+    AddImageComponent,
     //GalleryModule
   ],
   imports: [

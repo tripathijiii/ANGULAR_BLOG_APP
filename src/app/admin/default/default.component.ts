@@ -21,7 +21,7 @@ export class DefaultComponent implements AfterViewInit {
         }
         else{
           this.sidenav.mode='side';
-          this.sidenav.open()
+          this.sidenav.open();
         }
       })
   }
