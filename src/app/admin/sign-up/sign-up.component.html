@@ -1,1 +1,52 @@
-<p>sign-up works!</p>
+<mat-card>
+    <form (submit)="onSignUP(postForm)" #postForm="ngForm">
+        <mat-form-field>
+            <input type="text" 
+            ngModel
+            matInput name="title" 
+            required
+            #title = "ngModel"
+            placeholder="Username">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="email" 
+            ngModel
+            matInput name="title" 
+            required
+            #title = "ngModel"
+            placeholder="Email ID">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password"
+            matInput
+            required
+            ngModel
+            name="content"
+            placeholder="Password"
+            #content = "ngModel"
+            >
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password"
+            matInput
+            required
+            ngModel
+            name="content"
+            placeholder="Confirm Password"
+            #content = "ngModel"
+            >
+        </mat-form-field>
+        <button 
+        mat-raised-button
+        color="accent"
+        type="submit"
+        class="SignUpbutton"
+        >Sign Up</button>
+        
+    </form>
+    
+</mat-card>
+<a class="new" [routerLink]="['']" >
+    Login
+</a>
+<br>
