@@ -6,6 +6,7 @@ import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
 import { HomeComponent } from './admin/dashboard/home/home.component';
 import { PostCreateComponent } from './admin/dashboard/posts/post-create/post-create.component';
 import { DefaultComponent } from './admin/default/default.component';
+import { MainPageComponent } from './admin/main-page/main-page.component';
 import { SignInComponent } from './admin/sign-in/sign-in.component';
 import { GalleryLightboxComponent } from './gallery-lightbox/gallery-lightbox.component';
 
@@ -23,7 +24,7 @@ const routes: Routes = [
     },
   ]
 },
-{path:'',component:SignInComponent}
+{path:'',component:MainPageComponent}
 ];
 
 @NgModule({

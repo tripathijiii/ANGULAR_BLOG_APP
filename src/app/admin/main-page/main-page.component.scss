@@ -1,0 +1,30 @@
+mat-sidenav-content{
+    height: 100vh;
+    .main{
+        margin-left: 0;
+    }
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(20).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+mat-toolbar{
+    height: 60px;
+    color: green;
+    mat-icon{
+        margin-left: 15px;
+        color: #6d8299;
+    }
+    justify-content: space-between;
+    .box{
+        margin-top: 15px;
+    }
+}
+.title{
+    height: auto;
+    width: auto;
+    text-align: center;
+    position: relative;
+}
+mat-sidenav-container{
+    background-color: azure;
+}
