@@ -25,7 +25,9 @@ import { GalleryLightboxComponent } from './gallery-lightbox/gallery-lightbox.co
 import { AddImageComponent } from './admin/dashboard/gallery/add-image/add-image.component';
 import { SignInComponent } from './admin/sign-in/sign-in.component';
 import { MainPageComponent } from './admin/main-page/main-page.component';
+import { SignUpComponent } from './admin/sign-up/sign-up.component';
 //import { GalleryModule } from 'ng-gallery';
+
 
 const UX_Modules =[
   MatSidenavModule,
@@ -51,6 +53,7 @@ const UX_Modules =[
     AddImageComponent,
     SignInComponent,
     MainPageComponent,
+    SignUpComponent,
     //GalleryModule
   ],
   imports: [

@@ -8,6 +8,7 @@ import { PostCreateComponent } from './admin/dashboard/posts/post-create/post-cr
 import { DefaultComponent } from './admin/default/default.component';
 import { MainPageComponent } from './admin/main-page/main-page.component';
 import { SignInComponent } from './admin/sign-in/sign-in.component';
+import { SignUpComponent } from './admin/sign-up/sign-up.component';
 import { GalleryLightboxComponent } from './gallery-lightbox/gallery-lightbox.component';
 
 const routes: Routes = [
@@ -24,7 +25,12 @@ const routes: Routes = [
     },
   ]
 },
-{path:'',component:MainPageComponent}
+{path:'',component:MainPageComponent,
+children:[
+    {path:'',component:SignInComponent},
+    {path:'signUp',component:SignUpComponent},
+
+]}
 ];
 
 @NgModule({

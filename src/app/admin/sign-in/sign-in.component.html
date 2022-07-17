@@ -1,0 +1,30 @@
+<mat-card>
+    <form (submit)="onSignIN(postForm)" #postForm="ngForm">
+        <mat-form-field>
+            <input type="email" 
+            ngModel
+            matInput name="title" 
+            required
+            #title = "ngModel"
+            placeholder="Email ID">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password"
+            matInput
+            required
+            ngModel
+            name="content"
+            placeholder="password"
+            #content = "ngModel"
+            >
+        </mat-form-field>
+        <button 
+        mat-raised-button
+        color="accent"
+        type="submit"
+        class="SignInbutton"
+        >Sign In</button>
+        
+    </form>
+</mat-card>
+<br>
