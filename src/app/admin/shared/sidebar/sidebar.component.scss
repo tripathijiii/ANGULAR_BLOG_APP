@@ -7,8 +7,9 @@
     text-decoration: none;
 }
 
+
 mat-icon{
-    color: #8997ac;
+    color: rgb(240, 240, 240);
     font-family: 'Material Icons';
 }
 .user{
@@ -23,11 +24,11 @@ mat-icon{
     }
     .mail{
         margin-top: -10px;
-        color: #697d95;
+        color: #769784;
     }
 }
 .menu-head{
-    color: #466be0;
+    color: rgb(209, 226, 209);
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 20px;
@@ -48,10 +49,10 @@ mat-icon{
         color: white;
     }
     .menu-button:hover{
-        background: #2c3344;
+        background: rgb(148, 161, 149);
     }
     .menu-button:focus{
-        background: #2c3344;
+        background: rgb(172, 239, 219);
     }
 }
 

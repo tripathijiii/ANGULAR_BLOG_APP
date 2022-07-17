@@ -9,11 +9,9 @@
             <div class="toolbar">
                 <mat-toolbar>
                     <mat-icon (click)='sidebar.toggle()'>menu</mat-icon>
-                    <div class="box">
-                        <mat-icon>search</mat-icon>
-                        <mat-icon>bookmark_border</mat-icon>
-                        <mat-icon>mail_outline</mat-icon>
-                    </div>
+                    <button mat-button class="menu-button" [routerLink]="['']">
+                        <mat-icon>logout</mat-icon>
+                    </button>
                     <!-- <button (click)='sidebar.toggle()'>toggle sidebar</button> -->
                 </mat-toolbar>
             </div>

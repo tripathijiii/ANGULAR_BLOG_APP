@@ -2,3 +2,14 @@ mat-form-field{
     width: 100%;
     
 }
+.but{
+    color: white;
+    background-color: rgb(9, 9, 49);
+    border-radius: 12px;
+
+}
+.but:hover {
+    background-color: #041957; 
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
