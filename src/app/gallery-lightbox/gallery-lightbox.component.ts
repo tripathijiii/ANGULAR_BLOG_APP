@@ -39,7 +39,7 @@ export class GalleryLightboxComponent implements OnInit {
   totalImageCount=0;
   showCount=false;
   constructor(private http:HttpClient) {
-    this.http.get<{message:string,posts:Item[]}>("http://localhost:3000/api/allimages").subscribe((response)=>{
+    this.http.post<{message:string,posts:Item[]}>("http://localhost:3000/api/userimages",{title:localStorage.getItem('userEmail')}).subscribe((response)=>{
       this.galleryData = response.posts;
       this.totalImageCount=this.galleryData.length;
     })

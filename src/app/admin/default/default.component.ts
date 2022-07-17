@@ -10,9 +10,10 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class DefaultComponent implements AfterViewInit {
   @ViewChild(MatSidenav)
   sidenav! : MatSidenav;
-
-  constructor(private observer: BreakpointObserver) { }
-
+  constructor(private observer: BreakpointObserver) {
+    
+   }
+  
   ngAfterViewInit(): void {
       this.observer.observe(['(max-width: 800px']).subscribe((res)=>{
         if(res.matches){

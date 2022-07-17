@@ -2,5 +2,7 @@ export interface Post{
     id:string,
     title:String,
     content:String,
-    dateTime:Date
+    email:String,
+    dateTime:Date,
+
 }

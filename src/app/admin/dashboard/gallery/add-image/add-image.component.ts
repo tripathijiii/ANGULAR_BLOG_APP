@@ -16,7 +16,7 @@ export class AddImageComponent implements OnInit {
     if(form.invalid){
       return
     }
-    this.http.post<{message:string}>("http://localhost:3000/api/allimages",{title:form.value.title}).subscribe((response)=>{
+    this.http.post<{message:string}>("http://localhost:3000/api/allimages",{title:form.value.title,email:localStorage.getItem('userEmail')}).subscribe((response)=>{
       console.log(response);
     })
     form.resetForm();

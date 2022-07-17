@@ -15,7 +15,7 @@ export class PostService{
     }
 
     addPost(title:string,content:string,dateTime:any){
-        const post:Post = {id:null,title,content,dateTime:new Date()};
+        const post:Post = {id:null,title,content,email:localStorage.getItem('userEmail'),dateTime:new Date()};
         this.http.post<{message:string}>("http://localhost:3000/api/posts",post).subscribe((response)=>{
             console.log(response.message);
             this.posts.push(post);
@@ -23,7 +23,7 @@ export class PostService{
         })
     }
     getPost(){
-        this.http.get<{message:string,posts:Post[]}>("http://localhost:3000/api/posts").subscribe(postData=>{
+        this.http.post<{message:string,posts:Post[]}>("http://localhost:3000/api/userposts",{email:localStorage.getItem('userEmail')}).subscribe(postData=>{
             this.posts=postData.posts;
             console.log(this.posts);
             this.postUpdated.next([...this.posts]);
