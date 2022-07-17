@@ -23,6 +23,7 @@ import { HomeComponent } from './admin/dashboard/home/home.component';
 import { GalleryComponent } from './admin/dashboard/gallery/gallery.component';
 import { GalleryLightboxComponent } from './gallery-lightbox/gallery-lightbox.component';
 import { AddImageComponent } from './admin/dashboard/gallery/add-image/add-image.component';
+import { SignInComponent } from './admin/sign-in/sign-in.component';
 //import { GalleryModule } from 'ng-gallery';
 
 const UX_Modules =[
@@ -47,6 +48,7 @@ const UX_Modules =[
     GalleryComponent,
     GalleryLightboxComponent,
     AddImageComponent,
+    SignInComponent,
     //GalleryModule
   ],
   imports: [
