@@ -9,7 +9,7 @@
             <div class="toolbar">
                 <mat-toolbar>
                     <mat-icon (click)='sidebar.toggle()'>menu</mat-icon>
-                    <button mat-button class="menu-button" [routerLink]="['']">
+                    <button mat-button class="menu-button" (click)="onClickLogout()"  [routerLink]="['']">
                         <mat-icon>logout</mat-icon>
                     </button>
                     <!-- <button (click)='sidebar.toggle()'>toggle sidebar</button> -->

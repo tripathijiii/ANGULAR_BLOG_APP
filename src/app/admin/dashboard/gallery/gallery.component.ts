@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 //import { GalleryItem, ImageItem } from 'ng-gallery';
 @Component({
   selector: 'app-gallery',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
   
-  constructor() { }
+  constructor(private route:Router) { 
+    if(localStorage.getItem('logedIn')!='true'){
+      this.route.navigate(['']);
+    }
+  }
 
   ngOnInit(): void {
     

@@ -6,8 +6,7 @@
     <p class="content">{{post.content}}</p>
     <mat-action-row>
         <p class="date" >{{ post.dateTime | date: 'MMM d,y,h:mm:ss a'}}</p>
-        <button mat-button color="primary">Edit Post</button>
-        <button mat-button color="warn">Delete Post</button>
+        <button mat-button color="warn" (click)="onClickDelete( post.id )">Delete Post</button>
 
     </mat-action-row>
     <br>

@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { animate, style, transition,trigger,AnimationEvent } from '@angular/animations'
 import { HttpClient } from '@angular/common/http';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 interface Item {
   id:number;
   imageSrc: string;
@@ -38,7 +39,10 @@ export class GalleryLightboxComponent implements OnInit {
   controls = true;
   totalImageCount=0;
   showCount=false;
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient,private route:Router) {
+    if(localStorage.getItem('logedIn')!='true'){
+      this.route.navigate(['']);
+    }
     this.http.post<{message:string,posts:Item[]}>("http://localhost:3000/api/userimages",{title:localStorage.getItem('userEmail')}).subscribe((response)=>{
       this.galleryData = response.posts;
       this.totalImageCount=this.galleryData.length;

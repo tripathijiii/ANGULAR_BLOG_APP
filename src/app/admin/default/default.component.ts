@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout' 
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-default',
@@ -10,8 +11,10 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class DefaultComponent implements AfterViewInit {
   @ViewChild(MatSidenav)
   sidenav! : MatSidenav;
-  constructor(private observer: BreakpointObserver) {
-    
+  constructor(private observer: BreakpointObserver,private route:Router) {
+    if(localStorage.getItem('logedIn')!='true'){
+      this.route.navigate(['']);
+    }
    }
   
   ngAfterViewInit(): void {
@@ -25,6 +28,9 @@ export class DefaultComponent implements AfterViewInit {
          
         }
       })
+  }
+  onClickLogout(){
+    localStorage.setItem('logedIn',"false");
   }
 
 }

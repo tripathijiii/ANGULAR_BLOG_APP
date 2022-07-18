@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { PostService } from '../posts.service';
 @Component({
   selector: 'app-post-create',
@@ -8,7 +9,11 @@ import { PostService } from '../posts.service';
 })
 export class PostCreateComponent implements OnInit {
 
-  constructor(public postService:PostService) { }
+  constructor(public postService:PostService,private route:Router) { 
+    if(localStorage.getItem('logedIn')!='true'){
+      this.route.navigate(['']);
+    }
+  }
 
   ngOnInit(): void {
   }

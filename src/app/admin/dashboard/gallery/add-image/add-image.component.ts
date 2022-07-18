@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-image',
   templateUrl: './add-image.component.html',
@@ -8,7 +9,11 @@ import { NgForm } from '@angular/forms';
 })
 export class AddImageComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private route:Router) {
+    if(localStorage.getItem('logedIn')!='true'){
+      this.route.navigate(['']);
+    }
+   }
 
   ngOnInit(): void {
   }

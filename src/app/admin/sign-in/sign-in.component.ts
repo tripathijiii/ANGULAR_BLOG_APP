@@ -8,6 +8,7 @@ interface user{
   password:string;
   type:string;
   username:string;
+  photo:string;
 
 }
 
@@ -34,6 +35,7 @@ export class SignInComponent implements OnInit {
       localStorage.setItem('userName',response.posts[0].username);
       localStorage.setItem('type',response.posts[0].type);
       localStorage.setItem('logedIn','true');
+      localStorage.setItem('profileImageUrl',response.posts[0].photo);
       this.route.navigate(['/user']);
     })
   }
