@@ -10,6 +10,7 @@ mat-sidenav-content{
     }
 }
 mat-toolbar{
+    color: green;
     mat-icon{
         margin-left: 15px;
         color: #6d8299;
@@ -19,3 +20,10 @@ mat-toolbar{
         margin-top: 15px;
     }
 }
+.title{
+    height: auto;
+    width: auto;
+    text-align: center;
+    position: relative;
+}
+

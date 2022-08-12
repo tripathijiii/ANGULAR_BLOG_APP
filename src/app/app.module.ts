@@ -26,6 +26,7 @@ import { AddImageComponent } from './admin/dashboard/gallery/add-image/add-image
 import { SignInComponent } from './admin/sign-in/sign-in.component';
 import { MainPageComponent } from './admin/main-page/main-page.component';
 import { SignUpComponent } from './admin/sign-up/sign-up.component';
+import { UserslistComponent } from './admin/userslist/userslist.component';
 //import { GalleryModule } from 'ng-gallery';
 
 
@@ -54,6 +55,7 @@ const UX_Modules =[
     SignInComponent,
     MainPageComponent,
     SignUpComponent,
+    UserslistComponent,
     //GalleryModule
   ],
   imports: [

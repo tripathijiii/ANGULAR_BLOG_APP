@@ -3,8 +3,8 @@
   <div class="pola">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Chris_Evans_SDCC_2014.jpg/640px-Chris_Evans_SDCC_2014.jpg" width="200" height="200" >
     <div class="info">
-      <h2 class="username"> <b> Chris Evans</b></h2>
-      <h4 class="email">Shashwatesht@gmail.com</h4>
+      <h2 class="username"> <b>{{ name }}</b></h2>
+      <h4 class="email">{{ emailiD }}</h4>
   </div>
   </div>
     
@@ -17,7 +17,7 @@
     
   </a>
   <a [routerLink]="'/user/gallery'" class="data-card">
-    <h3>12</h3>
+    <h3>{{ gallerycount }}</h3>
     <h4>Pictures</h4>
     <p>Click here to see your gallery </p>
     

@@ -6,7 +6,7 @@
     <p class="content">{{post.content}}</p>
     <mat-action-row>
         <p class="date" >by - {{ post.email }}</p>
-        <p class="date" >{{ post.dateTime | date: 'MMM d,y,h:mm:ss a'}}</p>
+        <button mat-button color="warn" *ngIf="type=='admin'" (click)="onClickDelete(post.id)">delete</button>
         
 
     </mat-action-row>

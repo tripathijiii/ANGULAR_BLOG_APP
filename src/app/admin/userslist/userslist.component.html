@@ -1,0 +1,30 @@
+
+    <div class="polaroid">
+        <mat-accordion multi="true" *ngIf="posts.length > 0">
+            <mat-expansion-panel *ngFor="let post of posts" [expanded]="true">
+        <mat-expansion-panel-header class="title">
+            {{ post.username }}
+        </mat-expansion-panel-header>
+      <img
+        src="{{ post.photo }}"
+        class="image"
+        alt=""
+        width="100%"
+        height="100%"
+      />
+    <div class="container">
+        
+        {{ post.email }}
+        <br>
+      type- {{ post.type }}
+        </div>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="clickDelete(post.email)">Delete</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
+
+
+<p *ngIf="posts.length <= 0">No Posts Available</p>

@@ -1,0 +1,27 @@
+:host{
+    margin-top: 1rem;
+    display: block;
+}
+.title{
+    font-weight: 500;
+    font-size: 150%;
+}
+.content{
+    font-weight: 500;
+}
+
+.polaroid {
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    height: 25px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }

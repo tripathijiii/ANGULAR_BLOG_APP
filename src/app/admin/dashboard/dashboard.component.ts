@@ -10,12 +10,20 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   public counter;
+  public gallerycount;
+  public emailiD = localStorage.getItem('userEmail');
+  public imageLink = localStorage.getItem('profileImageUrl');
+  public name = localStorage.getItem('userName')
   constructor(private http:HttpClient,private route:Router) {
     if(localStorage.getItem('logedIn')!='true'){
       this.route.navigate(['']);
     }
-    this.http.get<{message:string,count:number}>("http://localhost:3000/api/blogCount").subscribe((response)=>{
+
+    this.http.post<{message:string,count:number}>("http://localhost:3000/api/blogCount",{email:this.emailiD}).subscribe((response)=>{
       this.counter = response.count;
+    })
+    this.http.post<{message:string,count:number}>("http://localhost:3000/api/galleryCount",{email:this.emailiD}).subscribe((response)=>{
+      this.gallerycount = response.count;
     })
    }
   
